@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meniu smart - Pizzerie Casa Bubu</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <style>
+        /* Basic reset and styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+
+        /* Hero Section */
+        .hero { text-align: center; padding: 2rem 1rem; background-color: #ffe5b4; }
+        .hero h1 { font-size: 2rem; color: #d35400; }
+        .hero p { color: #6d4c41; }
+        .order-btn { background: #e67e22; color: white; padding: 0.75rem 1.5rem; margin-top: 1rem; border: none; cursor: pointer; border-radius: 5px; }
+        
+        /* Pizza Categories and Items */
+        .category { margin: 2rem 0 1rem 0; text-align: center; font-weight: bold; font-size: 1.5rem; color: #d35400; }
+        .pizza-item { padding: 1rem; display: flex; align-items: center; border-bottom: 1px solid #ddd; }
+        .pizza-item img { width: 80px; height: 80px; border-radius: 10px; margin-right: 1rem; }
+        .pizza-item .details { flex-grow: 1; }
+        .add-to-cart { background: #27ae60; color: white; padding: 0.5rem 1rem; border: none; cursor: pointer; border-radius: 5px; }
+        
+        /* Bottom Bar */
+        .bottom-bar { position: fixed; bottom: 0; width: 100%; background: #d35400; color: white; display: flex; justify-content: space-around; padding: 1.5rem 0; }
+        .bottom-bar button { background: none; border: none; color: white; font-size: 1rem; display: flex; flex-direction: column; align-items: center; cursor: pointer; }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.5rem; }
+        }
+		
+		/* Hyperlink style */
+		a {
+		text-decoration: none;   /* Removes underline */
+		color: inherit;          /* Inherits color from parent element */
+		}
+
+		a:visited {
+			color: inherit;          /* Ensures visited links also inherit color */
+		}
+
+		a:hover, a:focus, a:active {
+			text-decoration: none;   /* Keeps no underline on hover, focus, or active */
+			outline: none;           /* Removes focus outline */
+		}
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+		<img src="./images/logo.jpg" width="180px" height="180px">
+        <h1>Meniu Smart Italian Pizza Casa Bubu</h1>
+        <p>Pizzeria Casa Bubu este o afacere de familie dedicată pasiunii pentru pizza autentică, pregătită cu ingrediente proaspete și rețete tradiționale. Casa Bubu oferă clienților o experiență culinară unică unde fiecare pizza este făcută cu grijă și dragoste.</p>
+		<button class="order-btn"><a href="tel:+40770600216">Comanda acum!<a></button>
+    </section>
+
+    <!-- Pizza Categories 
+    <div class="category">Classice</div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Classic Pizza">
+        <div class="details">
+            <h3>Margherita</h3>
+            <p>Tomato, Mozzarella, Basil</p>
+        </div>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Classic Pizza">
+        <div class="details">
+            <h3>Margherita</h3>
+            <p>Tomato, Mozzarella, Basil</p>
+        </div>
+    </div>-->
+    <div class="category">PIZZA</div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Margherita">
+        <div class="details">
+            <h3>Pizza Margherita</h3>
+            <p>aluat, sos de rosii, mozzarella<br>400gr</p>
+        </div>
+		<p><strong>31 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Quattro Stagioni">
+        <div class="details">
+            <h3>Pizza Quattro Stagioni</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto, ciuperci, salam dulce, anghinare<br>500gr</p>
+        </div>
+		<p><strong>40 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Prosciutto Cotto">
+        <div class="details">
+            <h3>Pizza Prosciutto Cotto</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto<br>470gr</p>
+        </div>
+		<p><strong>36 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Prosciutto Funghi">
+        <div class="details">
+            <h3>Pizza Prosciutto Funghi</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto, ciuperci<br>520gr</p>
+        </div>
+		<p><strong>37 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Diavola">
+        <div class="details">
+            <h3>Pizza Diavola</h3>
+            <p>aluat, sos de rosii, mozzarella, salam picant<br>470gr</p>
+        </div>
+		<p><strong>37 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Quattro Formaggi">
+        <div class="details">
+            <h3>Pizza Quattro Formaggi</h3>
+            <p>aluat, sos de rosii, mozzarella, gorgonzola, taleggio, parmezan<br>470gr</p>
+        </div>
+		<p><strong>42 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Quattro Formaggi Picanta">
+        <div class="details">
+            <h3>Pizza Quattro Formaggi Picanta</h3>
+            <p>aluat, sos de rosii, mozzarella, gorgonzola, taleggio, parmezan, salam picant<br>550gr</p>
+        </div>
+		<p><strong>45 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Salami">
+        <div class="details">
+            <h3>Pizza Salami</h3>
+            <p>aluat, sos de rosii, mozzarella, salam dulce<br>450gr</p>
+        </div>
+		<p><strong>37 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Gyusy">
+        <div class="details">
+            <h3>Pizza Gyusy</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto, ciuperci, salam dulce, ceapa rosie, parmezan<br>620gr</p>
+        </div>
+		<p><strong>43 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Carbonara">
+        <div class="details">
+            <h3>Pizza Carbonara</h3>
+            <p>aluat, sos de rosii, mozzarella, pancetta, ou, parmezan<br>520gr</p>
+        </div>
+		<p><strong>40 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Regina Margherita">
+        <div class="details">
+            <h3>Pizza Regina Margherita</h3>
+            <p>aluat, sos de rosii, mozzarella, mozzarella ciliegine, rosii cherry<br>470gr</p>
+        </div>
+		<p><strong>40 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Tonno e Cipolla">
+        <div class="details">
+            <h3>Pizza Tonno e Cipolla</h3>
+            <p>aluat, sos de rosii, mozzarella, ton, ceapa<br>530gr</p>
+        </div>
+		<p><strong>43 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Bubu">
+        <div class="details">
+            <h3>Pizza Bubu</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto, panceta, salam dulce, salsiccia<br>540gr</p>
+        </div>
+		<p><strong>47 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Primavera">
+        <div class="details">
+            <h3>Pizza Primavera</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto crudo, rucola, parmezan, rosii cherry<br>540gr</p>
+        </div>
+		<p><strong>46 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Alessia">
+        <div class="details">
+            <h3>Pizza Alessia</h3>
+            <p>aluat, sos de rosii, mozzarella, pastrama de pui, taleggio, porumb<br>510gr</p>
+        </div>
+		<p><strong>40 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Frutti Di Mare">
+        <div class="details">
+            <h3>Pizza Frutti Di Mare</h3>
+            <p>aluat, sos de rosii, mozzarella, creveti, dovlecel<br>560gr</p>
+        </div>
+		<p><strong>48 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Carpaccio">
+        <div class="details">
+            <h3>Pizza Carpaccio</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto crudo, parmezan<br>480gr</p>
+        </div>
+		<p><strong>41 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Kary">
+        <div class="details">
+            <h3>Pizza Kary</h3>
+            <p>aluat, sos de rosii, mozzarella, salam dulce, pancetta<br>500gr</p>
+        </div>
+		<p><strong>39 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Calzone">
+        <div class="details">
+            <h3>Pizza Calzone</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto, ciuperci<br>490gr</p>
+        </div>
+		<p><strong>38 lei</strong></p>
+    </div>
+    <div class="pizza-item">
+        <img src="./images/pizza.png" alt="Pizza Capricciosa">
+        <div class="details">
+            <h3>Pizza Capricciosa</h3>
+            <p>aluat, sos de rosii, mozzarella, prosciutto cotto, ciuperci, anghinare, masline<br>580gr</p>
+        </div>
+		<p><strong>45 lei</strong></p>
+    </div>
+	<br>
+	<br>
+	<br>
+	<br>
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+	    <button><a href="tel:+40770600216"><i class="bi bi-telephone-outbound-fill"></i></a></button>
+        <button onclick="scrollToTop()"><i class="bi bi-arrow-bar-up"></i></button>
+    </div>
+
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
